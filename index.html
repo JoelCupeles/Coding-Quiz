@@ -7,6 +7,9 @@
     <title>Coding Quiz</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <header>
@@ -15,6 +18,13 @@
     <main>
       <section id="start-section">
         <h2>Are you ready to test your JavaScript knowledge?</h2>
+
+        <div i="timer-container">
+            <p> You have <span id="time-left">60</span> 
+                seconds to complete the quiz. Each wrong answer deducts  <span id="time-deduct">10</span> 
+                seconds from your remaining time.</p>
+        </div>
+        
         <button id="start-button">Start Quiz</button>
       </section>
       <section id="quiz-section" style="display: none;">
