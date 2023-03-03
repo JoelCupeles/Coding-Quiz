@@ -39,6 +39,41 @@ const quizQuestions = [
 }
 ]
 
-// I need to create a function to starte the quizz
-// I need to set the timer and decreased by 10 second by every wrong answer
-// I need to check if the answer is correct or not 
+//Function
+
+function startQuiz() {
+    // Hide start section and show quiz section
+    document.getElementById('start-section').style.display = 'none';
+    quizSection.style.display = 'grid';
+  
+    // Set timer and show first question
+    setTime();
+    showQuestion();
+  }
+  
+  function showQuestion() {
+    // Get current question object
+    const currentQuestion = quizQuestions[currentQuestionIndex];
+  
+    // Display current question and choices
+    questionElement.textContent = currentQuestion.question;
+    choicesElement.innerHTML = '';
+    currentQuestion.choices.forEach(choice => {
+      const button = document.createElement('button');
+      button.classList.add('choice');
+      button.textContent = choice;
+      choicesElement.appendChild(button);
+    });
+
+     // Add event listeners to choice buttons
+  Array.from(choiceButtons).forEach(button => {
+    button.addEventListener('click', handleAnswer);
+  });
+}
+
+
+
+
+// Event listeners
+startButton.addEventListener('click', startQuiz);
+submitButton.addEventListener('click', saveScore);

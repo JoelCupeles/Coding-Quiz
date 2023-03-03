@@ -84,7 +84,8 @@
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   }
 
-  #start-button {
+  #start-button,
+  .choice {
   padding: 8px 16px;
   background-color: var(--secondary-color);
   color: #fff;
@@ -94,7 +95,8 @@
   transition: all 0.2s ease-in-out;
 }
 
-#start-button:hover {
+#start-button:hover,
+.choice:hover {
   background-color: #ff6600;
 }
 
