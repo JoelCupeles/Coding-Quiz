@@ -71,7 +71,67 @@ function startQuiz() {
   });
 }
 
+function handleAnswer(event) {
+    const selectedButton = event.target;
+    const selectedAnswer = selectedButton.textContent;
+  
+    // Check if answer is correct and adjust score and time left
+    if (selectedAnswer === quizQuestions[currentQuestionIndex].answer) {
+      score += 10;
+    } else {
+      timeLeft -= 10;
+    }
+  
+    // Increase question index and check if quiz is over
+    currentQuestionIndex++;
+    if (currentQuestionIndex === quizQuestions.length || timeLeft <= 0) {
+      endQuiz();
+    } else {
+      showQuestion();
+    }
+  }
+  
+  function endQuiz() {
+    // Stop timer and hide quiz section
+    clearInterval(timerInterval);
+    quizSection.style.display = 'none';
+  
+    // Show game over section and display final score
+    gameOverSection.style.display = 'grid';
+    finalScoreElement.textContent = score;
+}
 
+    function setTime() {
+// Display initial time
+    const timeElement = document.createElement('p');
+    timeElement.textContent = 'Time: ' + timeLeft;
+    quizSection.insertBefore(timeElement, questionElement);
+
+// Set timer interval
+    timerInterval = setInterval(() => {
+    timeLeft--;
+    timeElement.textContent = 'Time: ' + timeLeft;
+
+    // End quiz if time runs out
+if (timeLeft <= 0) {
+    endQuiz();
+  }
+
+}, 1000);
+}
+
+function saveScore(event) {
+event.preventDefault();
+
+// Get initials and save score to local storage
+const initials = initialsInput.value.toUpperCase();
+const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+highScores.push({ initials, score });
+localStorage.setItem('highScores', JSON.stringify(highScores));
+
+// Redirect to high scores page
+window.location.href = 'second.html';
+}
 
 
 // Event listeners
