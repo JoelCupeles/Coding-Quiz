@@ -14,7 +14,7 @@ This project was created by Joel Cupeles as part of a programming assignment.
 ## License
 This project is licensed under the MIT License.
 
-# Features
+## Features
 1. Multiple-choice questions
 2. 60-second time limit
 3. Score submission
