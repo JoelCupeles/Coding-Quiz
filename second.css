@@ -14,8 +14,8 @@
     --background-color: #f5f5f5;
     --font-family: 'Open Sans', sans-serif;
     --hfont-family: 'Montserrat', sans-serif;
-    --fs-h1: 2rem;
-    --fs-h2: 1.5rem;
+    --fs-h1: 1.5rem;
+    --fs-h2: 1rem;
     --fs-h3: 1rem;
     --fs-body: 1rem;
     --line-height: 1.5;
@@ -25,18 +25,84 @@
 
   @media (min-width: 800px){
     :root{
-      --fs-h1: 3rem;
-      --fs-h2: 2.5rem;
-      --fs-h3: 1.5rem;
+      --fs-h1: 2rem;
+      --fs-h2: 1.5rem;
+      --fs-h3: 1rem;
       --fs-body: 1.125rem;
     }
   }
-
   
     
     /* Global styles */
+    body {
+        font-family: var(--font-family);
+        background-color: var(--background-color);
+      }
+      
+      header {
+        background-color: var(--primary-color);
+        color: var(--background-color);
+        text-align: center;
+        padding:  2rem;
+        font-size: var(--fs-h1);
+      }
+      
+      table {
+        margin: 20px auto;
+        border-collapse: collapse;
+        width: 80%;
+        max-width: 800px;
+        min-width: 300px;
+      }
+      
+      th {
+        background-color: var(--secondary-color);
+        color: white;
+        font-size: var(--fs-body);
+        font-weight: bold;
+        padding: 10px;
+        text-align: left;
+      }
 
-    
-
-  
-    
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        font-size: var(--fs-body);
+        }
+        
+        tr:nth-child(even) {
+        background-color: var(--background-color);
+        }
+        
+        tr:hover {
+        background-color: var(--background-color);
+        }
+        
+        button {
+        font-family: var(--font-family);
+        font-size: var(--fs-body);
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        margin: 1rem;
+        }
+        
+        button:hover {
+        background-color: #3e8e41;
+        }
+        
+        #clear-button {
+        margin-right: 10px;
+        }
+        
+        #go-back-button {
+        background-color: #f44336;
+        }
+        
+        #go-back-button:hover {
+        background-color: #d32f2f;
+        }

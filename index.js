@@ -36,8 +36,19 @@ const quizQuestions = [
     question: 'What keyword is used to declare a variable in JavaScript?',
     choices: ['const', 'let', 'var', 'declare'],
     answer: 'var'
+},
+{
+    question: 'What is the correct syntax for referring to an external script called "app.js"?',
+    choices: ['<script src="app.js">', '<script name="app.js">', '<script href="app.js">', '<script link="app.js">'],
+    answer: '<script src="app.js">'
+},
+{
+    question: 'What is the output of the following code snippet: console.log(3 + 2 + "7")?',
+    choices: ['327', '12', '57', 'NaN'],
+    answer: '57'
 }
 ]
+
 
 //Function
 
