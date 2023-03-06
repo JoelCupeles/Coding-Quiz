@@ -23,5 +23,5 @@ This project is licensed under the MIT License.
 # Links
 https://joelcupeles.github.io/Coding-Quiz/
 
-![](joelcupeles.github.io_Coding-Quiz_index.html (1).png)
+![](Assets/joelcupeles.github.io_Coding-Quiz_index.html (1).png)
 
